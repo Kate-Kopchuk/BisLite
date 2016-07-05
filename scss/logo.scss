@@ -1,0 +1,12 @@
+.logo {
+	text-indent: -9999px;
+	background: url(../images/logo.png) no-repeat;
+	width: 148px;
+	height: 37px;
+	margin-right: 25px;
+	float: left;
+	& a {
+		display: block;
+		height: 100%;
+	}
+}

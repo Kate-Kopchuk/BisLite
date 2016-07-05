@@ -1,0 +1,307 @@
+/*!
+ * ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap v3.3.6 (http://get../bower_components/bootstrap-sass/assets/stylesheets/bootstrap.com)
+ * Copyright 2011-2015 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/blob/master/LICENSE)
+ */
+
+// Core variables and mixins
+@import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_variables";
+@import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins";
+@import "variables";
+
+// Reset and dependencies
+@import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/normalize";
+@import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/print";
+@import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/glyphicons";
+
+// Core CSS
+@import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/scaffolding";
+@import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/type";
+@import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/code";
+@import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/grid";
+@import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/tables";
+@import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/forms";
+@import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/buttons";
+
+// Components
+@import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/component-animations";
+@import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/dropdowns";
+@import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/button-groups";
+@import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/input-groups";
+@import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/navs";
+@import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/breadcrumbs";
+@import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/pagination";
+@import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/pager";
+@import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/labels";
+@import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/badges";
+@import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/jumbotron";
+@import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/thumbnails";
+@import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/alerts";
+@import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/progress-bars";
+@import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/media";
+@import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/list-group";
+@import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/panels";
+@import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/responsive-embed";
+@import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/wells";
+@import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/close";
+
+@import "logo";
+@import "navbar";
+
+// Components w/ JavaScript
+@import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/modals";
+@import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/tooltip";
+@import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/popovers";
+// @import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/carousel";
+
+@import "carousel";
+@import "dropdowns";
+
+// Utility classes
+@import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/utilities";
+@import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/responsive-utilities";
+
+body {
+	background: #fff;
+	font: 14px/1.5 Lato, Arial, Helvetica, sans-serif;
+	color: #000;
+}
+
+// Header
+.wrapper-header {
+	background: $bg-success;
+	padding: 38px 0 38px;
+	border-bottom: 1px solid $border-bg-color;
+	& li {
+		text-transform: uppercase;
+		font-weight: bold;
+	}
+	& .dropdown-menu {
+		border: transparent;
+		border-bottom: 5px solid $border-bg-primary;
+		& li {
+			border-bottom: 1px solid $border-bg-succes;
+			margin-left: 5px;
+			padding: 12px 0;
+		}
+		& li:last-child {
+			border: none;
+		}
+	}
+}
+
+// Heading
+.wrapper-heading {
+	background: $bg-color;
+	& span.glyphicon-chevron-right ,
+	  span.glyphicon-chevron-left {
+		display: none;
+	}
+}
+
+.carousel-control {
+	width: 5%;
+}
+// Features
+.wrapper-features {
+	padding: 60px 0 50px;
+	background: $bg-success;
+	border-bottom: 1px solid $border-bg-succes;
+}
+.features {
+	overflow: hidden;
+}
+.features-heading {
+	float: left;
+	margin-bottom: 18px;
+	& .icon-features {
+		float: left;
+		padding: 8px;
+		max-height: 40px;
+		max-width: 40px;
+		border-radius: 50%;
+		background: $bg-primary;
+		margin-right: 18px;
+	}
+	& .title-features {
+		float: left;
+		& h2 {
+			font-weight: 700;
+		}
+	}
+}
+.features-discription {
+	float: left;
+	font-size: 13px;
+	margin-bottom: 15px;
+}
+.features-footer {
+	float: left;
+	& a {
+		color: $bg-primary;
+	}
+}
+
+// Promo
+.wrapper-promo {
+	padding: 20px 0 40px;
+	& .carousel-inner {
+		background: #fff;
+		& .item {
+			padding-left: 0;
+			height: 100%;
+			margin-top: 20px;
+			padding-bottom: 40px;
+			& .photo {
+				overflow: hidden;
+				& img {
+					width: 100%;
+					height: auto;
+					position: relative;
+					z-index: 1;
+				}
+				& ul {
+					position: absolute;
+					height: 50%;
+					width: 100%;
+					background: $bg-primary;
+					z-index: 2;
+					opacity: 0;
+					margin: 0;
+					bottom: 0;
+					right: 15px;
+					&.list-photo li {
+						display: inline-block;
+						position: absolute;
+						z-index: 3;
+						top: 35%;
+						&.link-photo-1 {
+							left: 30%;
+						}
+						&.link-photo-2 {
+							right: 30%;
+						}
+					}
+				}
+				&:hover ul {
+					opacity: 1;
+				}
+			}
+		}
+	}
+}
+.promo-tittle {
+	overflow: hidden;
+	padding-bottom: 15px;
+	border-bottom: 1px solid $border-bg-succes;
+	& svg {
+		margin-right: 24px;
+		float: left;
+	}
+	& h2 {
+		float: left;
+		margin: 5px 0 0;
+	}
+}
+.carousel-inner {
+	border-bottom: 1px solid $border-bg-succes;
+}
+
+.list li {
+	display: inline-block;
+}
+span.glyphicon.glyphicon-chevron-left {
+	left: 940px;
+}
+
+// Content
+.wrapper-content {
+	border-bottom: 1px solid $border-bg-succes;
+	& .promo-tittle {
+		border: none;
+	}
+}
+
+.content-discription {
+	float: left;
+	& span {
+		font-style: italic;
+		font-weight: bold;
+	}
+}
+.clients {
+	float: left;
+	padding: 0;
+	& .client {
+		float: left;
+		list-style: none;
+		width: 33.3%;
+		max-width: 158px;
+		height: 98px;
+		background: #fff;
+		padding: 15px 23px;
+		border: 1px solid $border-bg-succes;
+		& img {
+			width: 100%;
+			height: auto;
+			max-width: 137px;
+			max-height: 67px;
+		}
+	}
+}
+
+// Alarm
+.alarm {
+	border: 1px solid $border-bg-color;
+	background-color: #e8fcfe;
+	padding: 36px 38px 36px 30px;
+	margin-bottom: 39px;
+	& p {
+		margin: 0;
+		font-size: 16px;
+	}
+}
+.alarm-button {
+	& button {
+		@include button-size (23px, 20px, 18px, 1.4, 8px);
+		@include button-variant (#000, #81e4ed, #2aacc8);
+		background: linear-gradient(to bottom, $bg-color, $bg-primary);
+		font-weight: bold;
+		text-transform: uppercase;
+		padding-left: 70px;
+		position: relative;
+		&:before {
+			content: "";
+			position: absolute;
+			background: url(../images/icon/PNG/download.png) no-repeat;
+			width: 30px;
+			height: 28px;
+			left: 20px;
+		}
+	}
+}
+
+// Footer
+.wrapper-footer {
+	background: $bg-success;
+	padding-top: 32px;
+	& ul {
+		padding: 0;
+		list-style: none;
+		& a {
+			color: #000;
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+		&.social li {
+			float: left;
+			width: 33.3%;
+			margin-bottom: 14px;
+		}
+	}
+}
+.footer-header {
+	overflow: hidden;
+	margin-bottom: 42px;
+}
